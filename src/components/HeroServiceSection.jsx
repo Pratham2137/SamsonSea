@@ -24,7 +24,7 @@ const HeroServiceSection = () => {
           {heroServiceSection.map((item) => (
             <div
               key={item.id}
-              className="bg-white w-[300px] hover:shadow-2xl rounded overflow-hidden"
+              className="bg-white w-[300px] lg:w-[350px] hover:shadow-2xl rounded overflow-hidden"
             >
               <div>
                 <ImageEffect
