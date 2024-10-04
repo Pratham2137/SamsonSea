@@ -6,7 +6,7 @@ import ImageEffect from "./ImageEffect";
 
 const HeroAboutSection = () => {
   return (
-    <div className="w-full flex justify-center ">
+    <div className="w-full flex justify-center overflow-hidden">
       <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between gap-x-10 max-w-[1200px] min-w-[350px] items-center w-full px-5">
         <div className=" flex flex-col md:items-center lg:items-start ">
           <div className="flex flex-col md:items-center lg:items-start">

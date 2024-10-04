@@ -6,7 +6,7 @@ import ImageEffect from "./ImageEffect";
 const HeroServiceSection = () => {
   return (
     <div
-      className="w-full py-7 flex justify-center items-center bg-cover bg-center bg-no-repeat"
+      className="w-full py-7 flex justify-center items-center bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: `url(${serviceSectionImage})`,
       }}
