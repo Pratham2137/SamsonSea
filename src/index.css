@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pageYellow: #ffb629;
+  --pageBlue: #1c2752;
+}
+
+.imageEffect::after {
+  content: "";
+  background: rgba(242, 242, 242, 0.4);
+  position: absolute;
+  z-index: 2;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all ease;
+}
+
+.imageEffect:hover::after {
+  background: rgba(242, 242, 242, 0);
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.7s;
+}
+
+.imageEffect:hover img {
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label,
+.inputBox input:hover ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--pageBlue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
