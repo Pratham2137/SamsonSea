@@ -28,8 +28,8 @@ const Footer = () => {
           </p>
         )}
       </div>
-      <div className="bg-[#091242] text-white flex gap-y-5 flex-col items-center py-6 overflow-hidden px-3">
-        <div className="flex flex-col lg:flex-row justify-center px-8 gap-y-10 lg:justify-between gap-x-5 lg:max-w-[1200px] lg:min-w-[350px] w-[400px] mb-5">
+      <div className="bg-[#091242] text-white flex gap-y-5 flex-col items-center py-6 overflow-hidden px-10">
+        <div className="flex flex-col lg:flex-row justify-center px-1 lg:px-8 gap-y-10 lg:justify-between gap-x-5 max-w-[1200px] min-w-[350px] mb-5">
           <div className="flex flex-col gap-5 lg:w-[35%] w-full">
             <h4 className="self-center lg:self-start">
               <img
@@ -85,7 +85,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email here*"
-              className="bg-transparent border border-solid border-[#4e5683] px-5 py-3 mb-5 max-w-[400px] min-w-[360px]"
+              className="bg-transparent border border-solid border-[#4e5683] px-5 py-3 mb-5 max-w-[400px] min-w-[350px]"
             ></input>
             <div className="flex items-center gap-4 w-full">
               <a
