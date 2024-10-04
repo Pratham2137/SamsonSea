@@ -4,7 +4,7 @@ import { homeFeatureSection } from "../constants";
 
 const HeroFeaturesSection = () => {
   return (
-    <div className="p-6 h-full lg:h-screen">
+    <div className="p-6 h-full lg:h-screen overflow-hidden">
       <div
         className="w-full h-full flex justify-center items-center bg-cover bg-center bg-no-repeat"
         style={{

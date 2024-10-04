@@ -22,7 +22,10 @@ const HeroServiceSection = () => {
         </h1>
         <div className="flex gap-y-4 gap-x-4 flex-col lg:flex-row justify-center ">
           {heroServiceSection.map((item) => (
-            <div key={item.id} className="bg-white w-[350px] hover:shadow-2xl rounded overflow-hidden">
+            <div
+              key={item.id}
+              className="bg-white w-[300px] hover:shadow-2xl rounded overflow-hidden"
+            >
               <div>
                 <ImageEffect
                   src={item.imgURL}
@@ -45,7 +48,12 @@ const HeroServiceSection = () => {
             </div>
           ))}
         </div>
-        <Link className="bg-white text-[#091242] rounded hover:bg-[--pageYellow] hover:text-white font-semibold text-lg py-2 px-4 " to='#'>Learn More</Link>
+        <Link
+          className="bg-white text-[#091242] rounded hover:bg-[--pageYellow] hover:text-white font-semibold text-lg py-2 px-4 "
+          to="#"
+        >
+          Learn More
+        </Link>
       </div>
     </div>
   );

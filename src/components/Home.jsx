@@ -12,7 +12,7 @@ const Home = () => {
       <HeroServiceSection />
       <HeroFeaturesSection />
       <div className="pt-8 !px-4 lg:pt-5 flex justify-center">
-        <ContactForm className="w-[90%] lg:w-full" />
+        <ContactForm className="w-[85%] lg:w-full" />
       </div>
     </main>
   );

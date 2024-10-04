@@ -23,7 +23,7 @@ const Footer = () => {
           className="w-full h-full z-[-1]"
         />
         {istext && ( // Only display the text if istext is true
-          <p className="text-5xl text-white font-semibold absolute z-2">
+          <p className="lg:text-5xl text-3xl text-white font-semibold absolute z-2">
             Let&apos;s Sail Together
           </p>
         )}
