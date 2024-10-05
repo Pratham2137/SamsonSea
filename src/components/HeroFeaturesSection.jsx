@@ -20,7 +20,7 @@ const HeroFeaturesSection = () => {
             <h4 className="text-[#111C54] font-bold text-6xl mb-8">
               Proven Expertise <br /> and Reliability
             </h4>
-            <p className="text-[#7e7e7e] text-lg w-[80%] mb-10">
+            <p className="text-[#7e7e7e] text-lg w-[85%] mb-10 lg:text-justify text-left">
               Samson Sea offers unparalleled expertise and customized maritime
               solutions. Our dedicated team ensures efficient and reliable
               service, tailored to meet your specific needs.
@@ -41,7 +41,7 @@ const HeroFeaturesSection = () => {
                 <h4 className="text-[--pageBlue] font-bold text-lg mb-3">
                   {item.title}
                 </h4>
-                <p className="text-[#606060]">{item.desc}</p>
+                <p className="text-[#606060] lg:text-justify text-left">{item.desc}</p>
                 <span className=" absolute h-full bg-[--pageYellow] group-hover:w-[3px] top-0 left-0"></span>
               </div>
             ))}

@@ -8,8 +8,8 @@ const PageNavigate = ({ title, src }) => {
     <div className="flex justify-center items-center relative w-full">
       <img src={bgImage} alt="ship" className="relative h-56 lg:h-full w-full"></img>
       <div className="absolute text-white">
-        <h4 className="text-5xl font-semibold mb-2 ">{title}</h4>
-        <p className="flex gap-3 text-xl items-center">
+        <h4 className="text-5xl font-semibold mb-2 tex-center">{title}</h4>
+        <p className="flex gap-3 text-xl justify-center items-center">
           <Link to={src}>Home</Link>{" "}
           <FaArrowRight className="text-[--pageYellow]" /> {title}
         </p>

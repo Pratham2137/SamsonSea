@@ -37,7 +37,7 @@ const HeroServiceSection = () => {
                 <h3 className="text-xl font-semibold text-[#091242]">
                   {item.title}
                 </h3>
-                <p className="text-[15px] text-[#606060]">{item.desc}</p>
+                <p className="text-[15px] text-[#606060] lg:text-justify ">{item.desc}</p>
                 <Link
                   to={item.btnSrc}
                   className="hover:text-[#091242] font-semibold w-fit"

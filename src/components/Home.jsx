@@ -14,9 +14,9 @@ const Home = () => {
       <HeroFeaturesSection />
 
       {/* Contact Form Wrapper with padding */}
-      <div className="relative flex justify-center lg:pb-[650px] lg:mt-[-100px]">
+      <div className="relative flex justify-center lg:pb-[650px] pb-[1200px] md:pb-[1100px] lg:mt-[-100px]">
         {/* Floating Contact Form */}
-        <ContactForm className="w-[85%] lg:w-full lg:absolute lg:-bottom-[80px] lg:z-10 h-full" />
+        <ContactForm className="w-[85%] lg:w-full absolute lg:absolute lg:-bottom-[80px] lg:z-10 h-full -bottom-[100px]" />
       </div>
     </main>
   );

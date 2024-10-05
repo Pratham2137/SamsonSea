@@ -17,7 +17,7 @@ const HeroAboutSection = () => {
             <h1 className="text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
-            <p className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left ">
+            <p className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left">
               Our team combines deep industry knowledge with tailored services,
               ensuring efficient and reliable operations across all aspects of
               ocean transportation. Whether it’s chartering, vessel management,

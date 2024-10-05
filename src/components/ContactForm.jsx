@@ -19,7 +19,7 @@ const ContactForm = ({ className }) => {
             <h2 className="lg:text-4xl text-3xl font-bold lg:font-semibold mb-4 text-[#132238] lg:text-start text-center">
               Let&apos;s discuss your Project
             </h2>
-            <p className="text-[#87909D] text-sm lg:w-[80%] lg:text-start text-center w-full">
+            <p className="text-[#87909D] text-sm lg:w-[80%] text-center w-full lg:text-justify">
               For any inquiries or to learn more about our services, please
               don&apos;t hesitate to reach out to us. Our team is ready to
               assist you with all your maritime needs and provide prompt,
