@@ -7,17 +7,17 @@ import ImageEffect from "./ImageEffect";
 const HeroAboutSection = () => {
   return (
     <div className="w-full flex justify-center overflow-hidden">
-      <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between gap-x-10 max-w-[1200px] min-w-[350px] items-center w-full px-5">
-        <div className=" flex flex-col md:items-center lg:items-start ">
+      <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between max-w-[1200px] min-w-[350px] items-center w-full px-10">
+        <div className=" flex flex-col md:items-center lg:items-start lg:w-[50%]">
           <div className="flex flex-col md:items-center lg:items-start">
-            <p className="flex gap-1 text-base px-2 py-1 bg-[#f4f4f4] w-fit">
+            <p className="flex gap-1 text-base px-2 py-1 bg-[#f4f4f4]  w-fit">
               <img src={icon} height={15} width={15} alt="icon" />
               Welcome to SamsonSea
             </p>
             <h1 className="text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
-            <p className="text-[15px] text-[#606060] w-[80%] mb-5 lg:text-left">
+            <p className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-balance">
               Our team combines deep industry knowledge with tailored services,
               ensuring efficient and reliable operations across all aspects of
               ocean transportation. Whether it’s chartering, vessel management,
@@ -42,7 +42,7 @@ const HeroAboutSection = () => {
                 </div>
                 <div className="flex justify-center items-center gap-2">
                   <img src={tick} width={20} height={20} alt="tick" />
-                  <p>20 Years Of Experience</p>
+                  <p>50+ Projects</p>
                 </div>
               </div>
             </div>
@@ -54,11 +54,13 @@ const HeroAboutSection = () => {
             More About Us
           </Link>
         </div>
-        <ImageEffect
-          src={ship}
-          alt="ship"
-          className={`min-w-[300px] max-w-auto h-[450px]`}
-        />
+        <div className="lg:w-auto md:w-full">
+          <ImageEffect
+            src={ship}
+            alt="ship"
+            className={`lg:min-w-[300px] lg:max-w-auto w-full h-[450px]`}
+          />
+        </div>
       </div>
     </div>
   );

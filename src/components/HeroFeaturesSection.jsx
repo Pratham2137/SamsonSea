@@ -4,14 +4,15 @@ import { homeFeatureSection } from "../constants";
 
 const HeroFeaturesSection = () => {
   return (
-    <div className="p-6 h-full lg:h-screen overflow-hidden">
+    <div className="p-6 h-full lg:h-screen 2xl:h-[60vh] w-full overflow-hidden">
       <div
-        className="w-full h-full flex justify-center items-center bg-cover bg-center bg-no-repeat"
+        className="w-full h-full flex justify-center items-center lg:bg-contain lg:bg-center lg:bg-no-repeat bg-none"
         style={{
-          backgroundImage: `url(${Pattern})`,
+          backgroundImage:
+            window.innerWidth >= 1024 ? `url(${Pattern})` : "none",
         }}
       >
-        <div className="max-w-[1200px] min-w-[350px] flex flex-col lg:flex-row justify-center items-center gap-10 px-5">
+        <div className="max-w-[1200px] min-w-[350px] flex flex-col lg:flex-row justify-center gap-10 px-5">
           <div className="flex justify-center w-full h-full flex-col gap-2">
             <p className="text-[--pageYellow] uppercase tracking-wider text-base">
               Why Us ?

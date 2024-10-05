@@ -11,7 +11,7 @@ const Home = () => {
       <HeroAboutSection />
       <HeroServiceSection />
       <HeroFeaturesSection />
-      <div className="pt-8 !px-4 lg:pt-5 flex justify-center">
+      <div className="pt-8 !px-4 lg:py-7 flex justify-center ">
         <ContactForm className="w-[85%] lg:w-full" />
       </div>
     </main>
