@@ -110,37 +110,37 @@ export const homeFeatureSection = [
 export const Services = [
   {
     id: 1,
-    title: "Ship Management & Consultancy Services",
+    title: "Ship Management &<br/>Consultancy Services",  // Add <br/>
     desc: "Samson Sea offers comprehensive ship management solutions, including crew management, technical services, compliance, and safety management. Our consultancy services provide expert advice to ship owners and operators, helping them navigate complex regulatory environments and optimize their operations",
     imgURL: serviceImg1,
   },
   {
     id: 2,
-    title: "Ship Brokers & Charterers-Offshore",
+    title: `Ship Brokers &<br/>Charterers-Offshore`,
     desc: "Our ship brokering services connect ship owners with charterers, facilitating long-term partnerships and successful offshore operations. We handle all aspects of the chartering process, ensuring both parties achieve their operational and financial goals",
     imgURL: serviceImg2,
   },
   {
     id: 3,
-    title: "Men and Material Movement",
+    title: "Men and Material<br/>Movement",
     desc: "We provide efficient and safe transportation of both personnel and materials for offshore projects. Whether it's a large-scale operation or a specialized project, we ensure timely and secure movement, tailored to the specific requirements of your operation.",
     imgURL: serviceImg3,
   },
   {
     id: 4,
-    title: "Offshore Personnel Transportation",
+    title: "Offshore Personnel<br/>Transportation",
     desc: "We specialize in the safe and efficient transportation of offshore personnel. Our state-of-the-art vessels ensure timely and reliable transfer of crew members to and from offshore installations, minimizing downtime and maximizing operational efficiency.",
     imgURL: serviceImg4,
   },
   {
     id: 5,
-    title: "Ship Sale & Purchase",
+    title: "Ship Sale &<br/>Purchase",
     desc: "With extensive industry knowledge, we facilitate smooth transactions in ship sale and purchase. Whether you're buying or selling vessels, our team handles all aspects of the process, from market analysis to negotiation, ensuring transparency and value for our clients.",
     imgURL: serviceImg5,
   },
   {
     id: 6,
-    title: "Salvage & Towage Services",
+    title: "Salvage & Towage<br/>Services",
     desc: "Our salvage and towage services are designed to respond to emergency situations with speed and precision. We provide expert assistance in towing and salvaging vessels, ensuring safety and minimizing environmental impact during operations.",
     imgURL: serviceImg6,
   },

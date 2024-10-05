@@ -3,7 +3,7 @@ import PageNavigate from "./PageNavigate";
 const AboutUs = () => {
   return (
   <div>
-    <PageNavigate title="About Us" src="/about-us" />
+    <PageNavigate title="About Us" src="/" />
   </div>
 );
 };

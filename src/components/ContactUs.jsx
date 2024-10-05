@@ -4,7 +4,7 @@ import PageNavigate from "./PageNavigate";
 const ContactUs = () => {
   return (
     <main>
-      <PageNavigate title="Contact Us" src="/contact-us" />
+      <PageNavigate title="Contact Us" src="/" />
       <ContactForm />
       <div className="w-full">
         <iframe
