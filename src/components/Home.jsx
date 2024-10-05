@@ -6,13 +6,17 @@ import HeroServiceSection from "./HeroServiceSection";
 
 const Home = () => {
   return (
-    <main>
+    <main className="relative">
+      {/* Hero sections */}
       <HeroSection />
       <HeroAboutSection />
       <HeroServiceSection />
       <HeroFeaturesSection />
-      <div className="pt-8 !px-4 lg:py-7 flex justify-center ">
-        <ContactForm className="w-[85%] lg:w-full" />
+
+      {/* Contact Form Wrapper with padding */}
+      <div className="relative flex justify-center lg:pb-[650px] lg:mt-[-100px]">
+        {/* Floating Contact Form */}
+        <ContactForm className="w-[85%] lg:w-full lg:absolute lg:-bottom-[80px] lg:z-10 h-full" />
       </div>
     </main>
   );

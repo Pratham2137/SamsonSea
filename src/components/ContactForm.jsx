@@ -124,50 +124,35 @@ const ContactForm = ({ className }) => {
                 </label>
               </div>
 
-              <div className="flex gap-x-5 items-center w-full">
-                {/* Input Box for Budget */}
-                <div className="relative mb-6 inputBox">
-                  <input
-                    required
-                    name="budget"
-                    type="number"
-                    className="w-full py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242]  transition-all"
-                  />
-                  <label className="absolute top-0 left-0 py-2.5 text-base  pointer-events-none transition-all duration-300">
-                    Budget*
-                  </label>
-                </div>
-
-                {/* Dropdown for Service Selection */}
-                <div className="relative mb-6 inputBox">
-                  <select
-                    required
-                    name="service"
-                    className="w-full py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242] transition-all "
-                  >
-                    <option value="" disabled selected>
-                      Select a Service*
-                    </option>
-                    <option value="Ship Management & Consultancy Services">
-                      Ship Management & Consultancy Services
-                    </option>
-                    <option value="Ship Brokers & Charterers-Offshore">
-                      Ship Brokers & Charterers-Offshore
-                    </option>
-                    <option value="Men and Material Movement">
-                      Men and Material Movement
-                    </option>
-                    <option value="Offshore Personnel Transportation">
-                      Offshore Personnel Transportation
-                    </option>
-                    <option value="Ship Sale & Purchase">
-                      Ship Sale & Purchase
-                    </option>
-                    <option value="Salvage & Towage Services">
-                      Salvage & Towage Services
-                    </option>
-                  </select>
-                </div>
+              {/* Dropdown for Service Selection */}
+              <div className="relative mb-6 inputBox">
+                <select
+                  required
+                  name="service"
+                  className="w-full py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242] transition-all "
+                >
+                  <option value="" disabled selected>
+                    Select a Service*
+                  </option>
+                  <option value="Ship Management & Consultancy Services">
+                    Ship Management & Consultancy Services
+                  </option>
+                  <option value="Ship Brokers & Charterers-Offshore">
+                    Ship Brokers & Charterers-Offshore
+                  </option>
+                  <option value="Men and Material Movement">
+                    Men and Material Movement
+                  </option>
+                  <option value="Offshore Personnel Transportation">
+                    Offshore Personnel Transportation
+                  </option>
+                  <option value="Ship Sale & Purchase">
+                    Ship Sale & Purchase
+                  </option>
+                  <option value="Salvage & Towage Services">
+                    Salvage & Towage Services
+                  </option>
+                </select>
               </div>
 
               {/* Mobile Number with Country Code */}
@@ -197,8 +182,8 @@ const ContactForm = ({ className }) => {
   );
 };
 
-ContactForm.propTypes={
-  className:PropTypes.string,
+ContactForm.propTypes = {
+  className: PropTypes.string,
 };
 
 export default ContactForm;

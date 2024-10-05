@@ -106,7 +106,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="h-[1px] bg-white border-none w-full" />
+        <div className="h-[1px] bg-white border-none lg:w-[120%] w-full" />
         <div className="p-2">
           Copyright © Samson Sea Private Limited | Designed & Developed by
           Synergy Media

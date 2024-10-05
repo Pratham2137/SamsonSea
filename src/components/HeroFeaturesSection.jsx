@@ -14,13 +14,13 @@ const HeroFeaturesSection = () => {
       >
         <div className="max-w-[1200px] min-w-[350px] flex flex-col lg:flex-row justify-center gap-10 px-5">
           <div className="flex justify-center w-full h-full flex-col gap-2">
-            <p className="text-[--pageYellow] uppercase tracking-wider text-base">
+            <p className="text-[--pageYellow] uppercase tracking-wider text-lg font-bold">
               Why Us ?
             </p>
-            <h4 className="text-[#111C54] font-bold text-5xl mb-5">
+            <h4 className="text-[#111C54] font-bold text-6xl mb-8">
               Proven Expertise <br /> and Reliability
             </h4>
-            <p className="text-[#7e7e7e] w-[80%] mb-5">
+            <p className="text-[#7e7e7e] text-lg w-[80%] mb-10">
               Samson Sea offers unparalleled expertise and customized maritime
               solutions. Our dedicated team ensures efficient and reliable
               service, tailored to meet your specific needs.
@@ -36,7 +36,7 @@ const HeroFeaturesSection = () => {
             {homeFeatureSection.map((item) => (
               <div
                 key={item.id}
-                className="bg-white py-3 px-4 hover:shadow-xl group rounded relative transition-all duration-300"
+                className="bg-white py-3 px-4 xl:hover:shadow-xl  group rounded relative transition-all duration-300"
               >
                 <h4 className="text-[--pageBlue] font-bold text-lg mb-3">
                   {item.title}
