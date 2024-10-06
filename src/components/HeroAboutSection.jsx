@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import icon from "../assets/HomePage/Icon1.svg";
 import tick from "../assets/HomePage/Tick.png";
 import ship from "../assets/HomePage/HomeAboutUs.png";
 import ImageEffect from "./ImageEffect";
+import SubtitleContainer from "./SubtitleContainer";
 
 const HeroAboutSection = () => {
   return (
@@ -10,10 +10,7 @@ const HeroAboutSection = () => {
       <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between max-w-[1200px] min-w-[350px] items-center w-full px-10">
         <div className=" flex flex-col md:items-center lg:items-start lg:w-[50%]">
           <div className="flex flex-col md:items-center lg:items-start">
-            <p className="flex gap-1 text-base px-2 py-1 bg-[#f4f4f4]  w-fit">
-              <img src={icon} height={15} width={15} alt="icon" />
-              Welcome to SamsonSea
-            </p>
+            <SubtitleContainer text="Welcome to SamsonSea" className="mb-1" />
             <h1 className="text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
@@ -24,18 +21,18 @@ const HeroAboutSection = () => {
               or ship inspections, we are dedicated to meeting your unique needs
               and exceeding expectations every step of the way.
             </p>
-            <div className="flex flex-col gap-5 mb-5 text-[#1C2752] font-semibold">
-              <div className="flex gap-10">
+            <div className="flex gap-5 mb-5 text-[#1C2752] font-semibold">
+              <div className="flex flex-col gap-10">
                 <div className="flex justify-center items-center gap-2">
                   <img src={tick} width={20} height={20} alt="tick" />
-                  <p>Trustworthy</p>re
+                  <p>Trustworthy</p>
                 </div>
-                <div className="flex justify-center items-center gap-2">
+                <div className="flex items-center gap-2">
                   <img src={tick} width={20} height={20} alt="tick" />
                   <p>Reliable</p>
                 </div>
               </div>
-              <div className="flex gap-10">
+              <div className="flex flex-col gap-10">
                 <div className="flex justify-center items-center gap-2">
                   <img src={tick} width={20} height={20} alt="tick" />
                   <p>Professional</p>
@@ -59,6 +56,7 @@ const HeroAboutSection = () => {
             src={ship}
             alt="ship"
             className={`lg:min-w-[300px] lg:max-w-auto w-full h-[450px]`}
+            scale={true}
           />
         </div>
       </div>

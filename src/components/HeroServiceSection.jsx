@@ -31,6 +31,7 @@ const HeroServiceSection = () => {
                   src={item.imgURL}
                   alt={item.imgAlt}
                   className="h-[200px] w-full p-0 m-0 "
+                  scale={true}
                 />
               </div>
               <div className="flex flex-col py-2 px-4 gap-y-4 ">

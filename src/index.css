@@ -27,7 +27,7 @@
   transition: all 0.7s;
 }
 
-.imageEffect:hover img {
+.imageEffect2:hover img {
   transform: scale(1.1);
   transition: all 0.7s;
 }

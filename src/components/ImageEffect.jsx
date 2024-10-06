@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 
-const ImageEffect = ({ className, src, alt }) => {
+const ImageEffect = ({ className, divClasses, src, alt, scale }) => {
   const classes = `relative z-[1] object-cover transition-transform duration-500 ease-out overflow-hidden ${
     className || ""
   }`;
 
+  const classes2 = `lg:w-full h-full flex items-center justify-center relative imageEffect ${
+    scale ? "imageEffect2" : ""
+  } overflow-hidden${divClasses || ""}`;
+
   return (
-    <div className="lg:w-full h-full flex items-center justify-center relative imageEffect overflow-hidden">
+    <div className={classes2}>
       <img src={src} alt={alt} className={classes} />
     </div>
   );
