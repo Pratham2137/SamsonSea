@@ -8,6 +8,8 @@ import dotPattern from "../assets/AboutUs/dotted.png";
 import ourIndustry from "../assets/AboutUs/AboutUsIndustry.jpg";
 import checkMark from "../assets/AboutUs/check-mark.png";
 import ImageEffect from "./ImageEffect";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 const AboutUs = () => {
   return (
@@ -18,25 +20,25 @@ const AboutUs = () => {
           {/*Our History Section Start*/}
           <div className="flex lg:justify-around lg:flex-row flex-col gap-y-5">
             <div className="flex lg:w-fit md:justify-center w-full mb-10 lg:mb-0">
-              <div className="relative pl-10 md:pl-0">
+              <div className="relative pl-5 md:pl-0">
                 <div className="relative">
                   <ImageEffect
                     src={ourCompany1}
                     alt="ourCompany1"
-                    className="h-[320px] w-[220px] z-[1] flex justify-center items-center object-fill object-center"
+                    className="h-[350px] w-[250px] z-[1] flex justify-center items-center object-fill object-center"
                   />
-                  <span className="absolute w-[80px] h-[280px] -right-[40px] top-[15px] bg-[--pageBlue] -z-[1]"></span>
+                  <span className="absolute w-[80px] h-[300px] -right-[40px] top-[15px] bg-[--pageBlue] -z-[1]"></span>
                 </div>
                 <div className="absolute z-[5] top-[45px] -right-[100px]">
                   <ImageEffect
                     src={ourCompany2}
                     alt="ourCompany2"
-                    className="h-[215px] w-[170px] p-3 bg-white object-fill"
+                    className="h-[230px] w-[200px] p-3 bg-white object-fill"
                   />
                 </div>
               </div>
             </div>
-            <div className="lg:w-[50%] w-full flex flex-col gap-5">
+            <div className="lg:w-[40%] w-full flex flex-col gap-5">
               <div>
                 <SubtitleContainer text="Our History" />
                 <h4 className="text-4xl font-extrabold text-[#091242]">
@@ -62,7 +64,7 @@ const AboutUs = () => {
 
           {/*Our mission Section Start*/}
           <div className="flex justify-around items-center mb-10 lg:flex-row flex-col-reverse">
-            <div className="lg:w-[50%] w-full flex flex-col gap-5">
+            <div className="lg:w-[40%] w-full flex flex-col gap-5">
               <div>
                 <SubtitleContainer text="Mission" />
                 <h4 className="text-4xl font-extrabold text-[--pageYellow]">
@@ -113,7 +115,13 @@ const AboutUs = () => {
                       <div className="md:h-[120px] md:w-[160px] h-[80px] w-[140px] bg-white absolute top-[20px] -left-[80px] rounded-xl shadow-custom-dark2 flex justify-center items-center z-50">
                         <p className="text-center text-base md:text-2xl font-semibold text-[#091242]">
                           <span className="md:text-4xl text-2xl text-[--pageYellow] font-bold">
-                            50+
+                            <CountUp end={50} redraw={true}>
+                              {({ countUpRef, start }) => (
+                                <VisibilitySensor onChange={start} delayedCall>
+                                  <span ref={countUpRef} />
+                                </VisibilitySensor>
+                              )}
+                            </CountUp>+
                           </span>
                           <br /> Projects
                         </p>
@@ -133,10 +141,10 @@ const AboutUs = () => {
                 src={ourIndustry}
                 alt="Our Industry"
                 scale={true}
-                className="h-[350px] w-[450px] rounded-xl object-fill"
+                className="h-[350px] w-[500px] rounded-xl object-fill"
               />
             </div>
-            <div className="lg:w-[50%] w-full flex flex-col gap-4">
+            <div className="lg:w-[40%] w-full flex flex-col gap-4">
               <div className="text-[#091242]">
                 <h4 className="text-4xl font-bold">
                   Our Industry Explicit <br />
