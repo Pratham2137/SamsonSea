@@ -100,11 +100,11 @@ const AboutUs = () => {
                       className="rounded-xl md:h-[300px] md:w-full w-[300px] z-[1] shadow-custom-dark3"
                       divClasses="overflow-hidden"
                     />
-                    <span className="absolute -bottom-[70px] left-[20px] -z-[10]">
+                    <span className="absolute -bottom-[80px] left-[40px] -z-[10]">
                       <img src={dotPattern} alt="Dot Pattern" />
                     </span>
                   </div>
-                  <div className="absolute z-[5] md:-right-[30px] md:-bottom-[60px] -right-[20px] -bottom-[40px]">
+                  <div className="absolute z-[5] md:-right-[45px] md:-bottom-[60px] -right-[50px] -bottom-[40px]">
                     <div className="relative">
                       <ImageEffect
                         src={ourMission2}
@@ -112,7 +112,7 @@ const AboutUs = () => {
                         className="md:h-[180px] md:w-[250px] h-[120px] w-[200px] rounded-2xl object-cover object-center shadow-custom-dark4"
                         divClasses="overflow-hidden"
                       />
-                      <div className="md:h-[120px] md:w-[160px] h-[80px] w-[140px] bg-white absolute top-[20px] -left-[80px] rounded-xl shadow-custom-dark2 flex justify-center items-center z-50">
+                      <div className="md:h-[120px] md:w-[160px] h-[80px] w-[140px] bg-white absolute top-[40px] -left-[100px] rounded-xl shadow-custom-dark2 flex justify-center items-center z-50">
                         <p className="text-center text-base md:text-2xl font-semibold text-[#091242]">
                           <span className="md:text-4xl text-2xl text-[--pageYellow] font-bold">
                             <CountUp end={50} redraw={true}>

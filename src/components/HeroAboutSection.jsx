@@ -5,6 +5,7 @@ import ImageEffect from "./ImageEffect";
 import SubtitleContainer from "./SubtitleContainer";
 
 const HeroAboutSection = () => {
+
   return (
     <div className="w-full flex justify-center overflow-hidden">
       <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between max-w-[1200px] min-w-[350px] items-center w-full px-10">
@@ -14,7 +15,10 @@ const HeroAboutSection = () => {
             <h1 className="text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
-            <p className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left">
+            <p
+              className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left"
+              id="homeAboutSubtext"
+            >
               Our team combines deep industry knowledge with tailored services,
               ensuring efficient and reliable operations across all aspects of
               ocean transportation. Whether it’s chartering, vessel management,
@@ -51,7 +55,7 @@ const HeroAboutSection = () => {
             More About Us
           </Link>
         </div>
-        <div className="lg:w-auto md:w-full">
+        <div className="lg:w-auto md:w-full" id="heroAboutImg">
           <ImageEffect
             src={ship}
             alt="ship"

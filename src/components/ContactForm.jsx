@@ -5,12 +5,58 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { PiPaperPlaneRightBold } from "react-icons/pi";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const ContactForm = ({ className }) => {
-  const [phone, setPhone] = React.useState("");
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbwGvbNKUmFngvMb4v7VrALtk8U7kccejnw_KZFg-1lBiEBS9U0rtyzi3kguhx73Fkk4/exec";
+
+  const [phone, setPhone] = useState(""); // State for storing phone number
+
+  // Function to format phone number with country code in parentheses
+  const formatPhoneNumber = (phoneNumber) => {
+    // Extract country code and the actual number
+    const countryCode = phoneNumber.match(/^\+\d+/); // Regex to match the country code
+    const number = phoneNumber.replace(countryCode, ""); // Extracting the number part
+
+    // Return the formatted phone number as (country code) number
+    return countryCode ? `(${countryCode}) ${number}` : phoneNumber;
+  };
+
+  useEffect(() => {
+    const form = document.forms["contact-form"];
+
+    if (form) {
+      const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Manually append the formatted phone number to the FormData object
+        const formData = new FormData(form);
+        const formattedPhone = formatPhoneNumber(phone); // Format the phone number
+        formData.append("phone", formattedPhone);
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) =>
+            alert("Thank you! Your form is submitted successfully.")
+          )
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      };
+
+      form.addEventListener("submit", handleSubmit);
+
+      // Cleanup event listener when component unmounts
+      return () => {
+        form.removeEventListener("submit", handleSubmit);
+      };
+    }
+  }, [phone]); // Dependency array to update whenever phone changes
+
   const classes = `flex justify-center py-5 px-4 ${className || ""}`;
+
   return (
     <div className={classes}>
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-x-10 gap-y-10 shadow-custom-dark rounded-md max-w-[1200px] min-w-[350px] p-10 bg-white">
@@ -60,7 +106,7 @@ const ContactForm = ({ className }) => {
           <div className="flex gap-x-5 items-center">
             <a
               className="hover:bg-[#091242] hover:text-white text-xl p-2 rounded"
-              href="www.facebook.comhttps://www.facebook.com/"
+              href="https://www.facebook.com/"
             >
               <FaFacebookF />
             </a>
@@ -84,7 +130,12 @@ const ContactForm = ({ className }) => {
             We&apos;re here to assist with all your inquiries
           </p>
           <div>
-            <form action="" method="post" className="space-y-7">
+            <form
+              action=""
+              method="post"
+              name="contact-form"
+              className="space-y-7"
+            >
               {/* Input Box for Name */}
               <div className="relative mb-6 inputBox">
                 <input
@@ -158,21 +209,38 @@ const ContactForm = ({ className }) => {
               {/* Mobile Number with Country Code */}
               <div className="relative mb-6 inputBox">
                 <PhoneInput
-                  required
-                  country={"in"} // Setting default country to India
+                  country={"in"}
                   value={phone}
-                  onChange={(phone) => setPhone(phone)}
-                  inputClass="!w-full !lg:w-fit py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242]  transition-all"
+                  onChange={(phone) => setPhone(phone)} // Store phone number in state
+                  inputStyle={{
+                    height: 45 + "px",
+                    width: "100%",
+                    border: "none",
+                    borderBottom: "1px solid #D1D5DB",
+                    borderRadius: 0 + "px",
+                  }}
+                  buttonStyle={{
+                    background: "transparent",
+                    width: 50 + "px",
+                    border: "none",
+                  }}
+                  containerStyle={{
+                    borderRadius: 0 + "px",
+                  }}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                    autoFocus: true,
+                  }}
                 />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-yellow-500 text-white border-none py-2 px-4 rounded-md flex justify-center items-center gap-2 text-lg hover:bg-[#091242] hover:shadow-lg transition-all"
+                className="bg-[#091242] hover:bg-[#132238] duration-500 py-3 px-8 text-white text-base font-medium flex items-center gap-2 rounded"
               >
-                Submit
-                <PiPaperPlaneRightBold className="text-xl font-bold" />
+                Submit <PiPaperPlaneRightBold />
               </button>
             </form>
           </div>
