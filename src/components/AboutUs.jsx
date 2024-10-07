@@ -10,8 +10,14 @@ import checkMark from "../assets/AboutUs/check-mark.png";
 import ImageEffect from "./ImageEffect";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AboutUs = () => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  useGSAP(() => {});
+
   return (
     <div>
       <PageNavigate title="About Us" src="/" />
@@ -121,7 +127,8 @@ const AboutUs = () => {
                                   <span ref={countUpRef} />
                                 </VisibilitySensor>
                               )}
-                            </CountUp>+
+                            </CountUp>
+                            +
                           </span>
                           <br /> Projects
                         </p>

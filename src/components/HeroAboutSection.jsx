@@ -1,31 +1,56 @@
+import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import tick from "../assets/HomePage/Tick.png";
 import ship from "../assets/HomePage/HomeAboutUs.png";
 import ImageEffect from "./ImageEffect";
 import SubtitleContainer from "./SubtitleContainer";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HeroAboutSection = () => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  useGSAP(() => {
+    let animateTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".animateText",
+        start: "top bottom",
+        end: "top 70%",
+        // play pause resume reset restart complete reverse none
+        toggleActions:"none play none reset"
+      },
+    });
+
+    animateTl.from(".animateText", {
+      opacity: 0,
+      y: "40px",
+      duration: 0.5,
+      stagger: { each: 0.2 },
+    });
+    animateTl.from("#heroAboutImg", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+    },"<0.5");
+  });
 
   return (
     <div className="w-full flex justify-center overflow-hidden">
       <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between max-w-[1200px] min-w-[350px] items-center w-full px-10">
         <div className=" flex flex-col md:items-center lg:items-start lg:w-[50%]">
-          <div className="flex flex-col md:items-center lg:items-start">
+          <div className="animateText lex flex-col md:items-center lg:items-start">
             <SubtitleContainer text="Welcome to SamsonSea" className="mb-1" />
-            <h1 className="text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
+            <h1 className=" animateText text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
-            <p
-              className="text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left"
-              id="homeAboutSubtext"
-            >
+            <p className="animateText text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left">
               Our team combines deep industry knowledge with tailored services,
               ensuring efficient and reliable operations across all aspects of
               ocean transportation. Whether it’s chartering, vessel management,
               or ship inspections, we are dedicated to meeting your unique needs
               and exceeding expectations every step of the way.
             </p>
-            <div className="flex gap-5 mb-5 text-[#1C2752] font-semibold">
+            <div className="animateText flex gap-5 mb-5 text-[#1C2752] font-semibold">
               <div className="flex flex-col gap-10">
                 <div className="flex justify-center items-center gap-2">
                   <img src={tick} width={20} height={20} alt="tick" />
@@ -48,12 +73,14 @@ const HeroAboutSection = () => {
               </div>
             </div>
           </div>
-          <Link
-            to="#"
-            className="bg-[--pageYellow] w-fit py-2 px-4 font-semibold text-[18px] text-[--pageBlue] my-3 hover:bg-[--pageBlue] hover:text-[--pageYellow] transition-all duration-300 active:bg-[#2d408a] hover:shadow-2xl"
-          >
-            More About Us
-          </Link>
+          <div className="animateText">
+            <Link
+              to="#"
+              className="bg-[--pageYellow] w-fit py-2 px-4 font-semibold text-[18px] text-[--pageBlue] my-3 hover:bg-[--pageBlue] hover:text-[--pageYellow] transition-all duration-300 hover:shadow-2xl active:scale-[0.96]"
+            >
+              More About Us
+            </Link>
+          </div>
         </div>
         <div className="lg:w-auto md:w-full" id="heroAboutImg">
           <ImageEffect

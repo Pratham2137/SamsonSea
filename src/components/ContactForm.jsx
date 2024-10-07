@@ -181,8 +181,9 @@ const ContactForm = ({ className }) => {
                   required
                   name="service"
                   className="w-full py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242] transition-all "
+                  defaultValue="Select a Service"
                 >
-                  <option value="" disabled selected>
+                  <option value="Select a Service" disabled >
                     Select a Service*
                   </option>
                   <option value="Ship Management & Consultancy Services">
@@ -230,7 +231,6 @@ const ContactForm = ({ className }) => {
                   inputProps={{
                     name: "phone",
                     required: true,
-                    autoFocus: true,
                   }}
                 />
               </div>
