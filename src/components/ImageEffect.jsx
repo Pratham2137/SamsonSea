@@ -11,7 +11,7 @@ const ImageEffect = ({ className, divClasses, src, alt, scale }) => {
 
   return (
     <div className={classes2}>
-      <img src={src} alt={alt} className={classes} />
+      <img src={src} alt={alt} className={classes} loading="lazy" />
     </div>
   );
 };

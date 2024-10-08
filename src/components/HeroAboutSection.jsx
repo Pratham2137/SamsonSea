@@ -25,16 +25,16 @@ const HeroAboutSection = () => {
       opacity: 0,
       y: "40px",
       duration: 0.5,
-      stagger: { each: 0.2 },
+      stagger: { each: 0.1 },
     });
     animateTl.from(
       "#heroAboutImg",
       {
         opacity: 0,
         scale: 0.8,
-        duration: 1,
+        duration: 0.5,
       },
-      "<0.5"
+      "<0.3"
     );
   });
 

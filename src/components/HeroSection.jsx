@@ -15,7 +15,7 @@ const HeroSection = () => {
       >
         <source src={Video} type="video/mp4" />
       </video>
-      <img src={Logo} alt="Logo" className={`absolute z-2 h-[300px]`} />
+      <img src={Logo} alt="Logo" className={`absolute z-2 h-[300px]`}  />
     </div>
   );
 };

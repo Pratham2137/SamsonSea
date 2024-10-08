@@ -11,19 +11,19 @@ const Service = () => {
     let servicePageAnimate = gsap.timeline({});
 
     servicePageAnimate.from(".serviceSectionText", {
-      delay: 1,
+      delay: 0.3,
       opacity: 0,
       y: "40px",
-      duration: 0.7,
-      stagger: { each: 0.5 },
+      duration: 0.4,
+      stagger: { each: 0.4 },
     });
     servicePageAnimate.from(
       ".serviceSectionImg",
       {
         opacity: 0,
         scale: 0.8,
-        duration: 0.7,
-        stagger: { each: 1 },
+        duration: 0.4,
+        stagger: { each: 0.4 },
       },
       "<0.4"
     );
@@ -56,6 +56,7 @@ const Service = () => {
                   src={service.imgURL}
                   alt="Service 1"
                   className="md:h-[300px] md:w-[350px] h-[200px]"
+                  loading="lazy"
                 />
               </div>
             </div>

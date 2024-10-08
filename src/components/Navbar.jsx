@@ -55,12 +55,10 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <Link
-          to="#"
-          className="hidden lg:block bg-[--pageYellow] px-6 py-1.5 rounded-3xl font-semibold text-[--pageBlue] hover:bg-[--pageBlue] hover:text-[--pageYellow] transition-all duration-300 active:bg-[#2d408a] hover:shadow-2xl"
+        <div
+          className="hidden lg:block px-12 py-4 rounded-3xl bg-transparent text-transparent cursor-default"
         >
-          Call Now
-        </Link>
+        </div>
         <button className="ml-auto lg:hidden" onClick={toggleNavigation}>
           {openNavigation ? (
             <IoMdClose className="text-3xl text-[--pageBlue]" />

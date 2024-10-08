@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { PiPaperPlaneRightBold } from "react-icons/pi";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const ContactForm = ({ className }) => {
@@ -105,19 +105,19 @@ const ContactForm = ({ className }) => {
           </div>
           <div className="flex gap-x-5 items-center">
             <a
-              className="hover:bg-[#091242] hover:text-white text-xl p-2 rounded"
+              className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
               href="https://www.facebook.com/"
             >
               <FaFacebookF />
             </a>
             <a
-              className="hover:bg-[#091242] hover:text-white text-xl p-2 rounded"
+              className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
               href="https://www.instagram.com/"
             >
               <FaInstagram />
             </a>
             <a
-              className="hover:bg-[#091242] hover:text-white text-xl p-2 rounded"
+              className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
               href="https://in.linkedin.com/"
             >
               <FaLinkedinIn />
@@ -238,7 +238,7 @@ const ContactForm = ({ className }) => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-[#091242] hover:bg-[#132238] duration-500 py-3 px-8 text-white text-base font-medium flex items-center gap-2 rounded"
+                className="bg-[#091242] hover:bg-[--pageYellow] duration-300 py-3 px-8 text-white text-base font-medium flex items-center gap-2 rounded"
               >
                 Submit <PiPaperPlaneRightBold />
               </button>

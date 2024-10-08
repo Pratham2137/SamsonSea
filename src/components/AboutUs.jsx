@@ -1,11 +1,11 @@
 import PageNavigate from "./PageNavigate";
 import SubtitleContainer from "./SubtitleContainer";
-import ourCompany1 from "../assets/AboutUs/AboutUs-ourCompany.jpg";
-import ourCompany2 from "../assets/AboutUs/AboutUs-ourCompany2.jpg";
-import ourMission1 from "../assets/AboutUs/AboutUsMission.jpg";
-import ourMission2 from "../assets/AboutUs/AboutUsMission2.jpg";
+import ourCompany1 from "../assets/AboutUs/AboutUs-ourCompany.webp";
+import ourCompany2 from "../assets/AboutUs/AboutUs-ourCompany2.webp";
+import ourMission1 from "../assets/AboutUs/AboutUsMission.webp";
+import ourMission2 from "../assets/AboutUs/AboutUsMission2.webp";
 import dotPattern from "../assets/AboutUs/dotted.png";
-import ourIndustry from "../assets/AboutUs/AboutUsIndustry.jpg";
+import ourIndustry from "../assets/AboutUs/AboutUsIndustry.webp";
 import checkMark from "../assets/AboutUs/check-mark.png";
 import ImageEffect from "./ImageEffect";
 import CountUp from "react-countup";
@@ -24,8 +24,8 @@ const AboutUs = () => {
       delay: 0.4,
       opacity: 0,
       y: "50px",
-      duration: 1,
-      stagger: { each: 0.2 },
+      duration: 0.5,
+      stagger: { each: 0.3 },
     });
     ourCompanyAnimate.from(
       ".ourCompanyImg1",
@@ -42,7 +42,7 @@ const AboutUs = () => {
         opacity: 0,
         left: 0,
         width: 0,
-        duration: 0.7,
+        duration: 0.5,
       },
       "<0.7"
     );
@@ -51,7 +51,7 @@ const AboutUs = () => {
       {
         opacity: 0,
         width: 0,
-        duration: 1,
+        duration: 0.5,
       },
       "<0.5"
     );
@@ -69,9 +69,9 @@ const AboutUs = () => {
     ourMissionAnimate.from(".ourMissionText", {
       opacity: 0,
       y: "60px",
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.inOut",
-      stagger: { each: 0.2 },
+      stagger: { each: 0.3 },
     });
 
     ourMissionAnimate.from(
@@ -123,18 +123,18 @@ const AboutUs = () => {
 
     ourIndustryAnimate.from(".ourIndustryImg", {
       opacity: 0,
-      scale: 0.8,
-      duration: 1,
+      scale: 0.7,
+      duration: 0.6,
     });
     ourIndustryAnimate.from(
       ".ourIndustryText",
       {
         opacity: 0,
         y: "40px",
-        duration: 0.7,
+        duration: 0.5,
         stagger: { each: 0.2 },
       },
-      "<0.5"
+      "<0.2"
     );
   });
 

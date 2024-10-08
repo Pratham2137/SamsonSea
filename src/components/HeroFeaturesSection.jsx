@@ -4,8 +4,11 @@ import { homeFeatureSection } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
 
 const HeroFeaturesSection = () => {
+  const [isBgLoaded, setIsBgLoaded] = useState(false);
+
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
@@ -14,7 +17,6 @@ const HeroFeaturesSection = () => {
         trigger: ".AnimateFeatureText",
         start: "top bottom",
         end: "top 70%",
-        // play pause resume reset restart complete reverse none
         toggleActions: "none play none reset",
       },
     });
@@ -25,20 +27,32 @@ const HeroFeaturesSection = () => {
       duration: 0.3,
       stagger: { each: 0.1 },
     });
-    featureAnimate.from(".featuresContainer", {
-      opacity: 0,
-      y: "40px",
-      duration: 1,
-    });
+    featureAnimate.from(
+      ".featuresContainer",
+      {
+        opacity: 0,
+        y: "40px",
+        duration: 0.5,
+      },
+      "<0.3"
+    );
   });
+
+  // Lazy load the background image when the screen size is large enough
+  useEffect(() => {
+    if (window.innerWidth >= 1024) {
+      const img = new Image();
+      img.src = Pattern;
+      img.onload = () => setIsBgLoaded(true);
+    }
+  }, []);
 
   return (
     <div className="p-6 h-full lg:h-screen 2xl:h-[60vh] w-full overflow-hidden">
       <div
-        className="w-full h-full flex justify-center items-center lg:bg-contain lg:bg-center lg:bg-no-repeat bg-none"
+        className={`w-full h-full flex justify-center items-center lg:bg-contain lg:bg-center lg:bg-no-repeat bg-none`}
         style={{
-          backgroundImage:
-            window.innerWidth >= 1024 ? `url(${Pattern})` : "none",
+          backgroundImage: isBgLoaded ? `url(${Pattern})` : "none", // Lazy loaded background
         }}
       >
         <div className="max-w-[1200px] min-w-[350px] flex flex-col lg:flex-row justify-center items-center gap-10 px-5">
@@ -63,10 +77,7 @@ const HeroFeaturesSection = () => {
               </Link>
             </div>
           </div>
-          <div
-            className=" flex flex-col gap-y-6
-            featuresContainer"
-          >
+          <div className="flex flex-col gap-y-6 featuresContainer">
             {homeFeatureSection.map((item) => (
               <div
                 key={item.id}
@@ -78,7 +89,7 @@ const HeroFeaturesSection = () => {
                 <p className="text-[#606060] lg:text-justify text-left">
                   {item.desc}
                 </p>
-                <span className=" absolute h-full bg-[--pageYellow] group-hover:w-[3px] top-0 left-0"></span>
+                <span className="absolute h-full bg-[--pageYellow] group-hover:w-[3px] top-0 left-0"></span>
               </div>
             ))}
           </div>

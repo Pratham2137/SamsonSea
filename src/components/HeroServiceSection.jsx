@@ -22,10 +22,10 @@ const HeroServiceSection = () => {
 
     serviceAnimate.from(".serviceContainer", {
       opacity: 0,
-      x: 100,
-      duration: 1,
-      ease: "power2",
-      stagger: 0.4,
+      x: 60,
+      duration: 0.5,
+      ease: "power2.inOut",
+      stagger: { each: 0.3 },
     });
     serviceAnimate.from(
       ".serviceBtn",
@@ -34,7 +34,7 @@ const HeroServiceSection = () => {
         y: "20px",
         duration: 0.5,
       },
-      "<0.5"
+      "<0.3"
     );
   });
 
