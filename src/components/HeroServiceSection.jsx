@@ -25,13 +25,17 @@ const HeroServiceSection = () => {
       x: 100,
       duration: 1,
       ease: "power2",
-      stagger: 0.3,
+      stagger: 0.4,
     });
-    serviceAnimate.from(".serviceBtn",{
-      opacity:0,
-      y:"20px",
-      duration:0.5,
-    },"<0.5");
+    serviceAnimate.from(
+      ".serviceBtn",
+      {
+        opacity: 0,
+        y: "20px",
+        duration: 0.5,
+      },
+      "<0.5"
+    );
   });
 
   return (
@@ -50,7 +54,7 @@ const HeroServiceSection = () => {
             className={`absolute left-1/2 -translate-x-1/2 bottom-[-5px] h-[3px] bg-[--pageYellow] w-[60%] `}
           ></span>
         </h1>
-        <div className="flex gap-y-4 gap-x-4 flex-col lg:flex-row justify-center h-full w-full">
+        <div className="flex gap-y-4 gap-x-4 flex-col lg:flex-row justify-center items-center h-full w-full">
           {heroServiceSection.map((item) => (
             <div
               key={item.id}

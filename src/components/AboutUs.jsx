@@ -16,7 +16,41 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AboutUs = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
-  useGSAP(() => {});
+  useGSAP(() => {
+    let aboutPageAnimate = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".ourCompanyText",
+        start: "top 80%",
+        end: "top 70%",
+        markers: true,
+        // play pause resume reset restart complete reverse none
+        toggleActions: "none play none reset",
+      },
+    });
+
+    aboutPageAnimate.from(".ourCompanyText", {
+      delay: 1,
+      opacity: 0,
+      y: "50px",
+      duration: 1,
+      stagger: { each: 0.2 },
+    });
+    aboutPageAnimate.from(".ourCompanyImg1", {
+      opacity:0,
+      scale: 0.8,
+      duration: 0.5,
+    },"<");
+    aboutPageAnimate.from(".ourCompanyImg2", {
+      opacity:0,
+      left:0,
+      width: 0,
+      duration: 1,
+    },"<0.7");
+    aboutPageAnimate.from(".ourCompanyImg3", {
+      width: 0,
+      duration: 1,
+    });
+  });
 
   return (
     <div>
@@ -26,16 +60,17 @@ const AboutUs = () => {
           {/*Our History Section Start*/}
           <div className="flex lg:justify-around lg:flex-row flex-col gap-y-5">
             <div className="flex lg:w-fit md:justify-center w-full mb-10 lg:mb-0">
-              <div className="relative pl-5 md:pl-0">
-                <div className="relative">
+              <div className=" relative pl-5 md:pl-0">
+                <div className=" relative">
                   <ImageEffect
                     src={ourCompany1}
                     alt="ourCompany1"
-                    className="h-[350px] w-[250px] z-[1] flex justify-center items-center object-fill object-center"
+                    className=" h-[350px] w-[250px] z-[1] flex justify-center items-center object-fill object-center"
+                    divClasses="ourCompanyImg1"
                   />
-                  <span className="absolute w-[80px] h-[300px] -right-[40px] top-[15px] bg-[--pageBlue] -z-[1]"></span>
+                  <span className="ourCompanyImg2 absolute w-[80px] h-[300px] -right-[40px] top-[15px] bg-[--pageBlue] -z-[1]"></span>
                 </div>
-                <div className="absolute z-[5] top-[45px] -right-[100px]">
+                <div className=" ourCompanyImg3 absolute z-[5] top-[45px] -right-[100px]">
                   <ImageEffect
                     src={ourCompany2}
                     alt="ourCompany2"
@@ -46,12 +81,15 @@ const AboutUs = () => {
             </div>
             <div className="lg:w-[40%] w-full flex flex-col gap-5">
               <div>
-                <SubtitleContainer text="Our History" />
-                <h4 className="text-4xl font-extrabold text-[#091242]">
+                <SubtitleContainer
+                  text="Our History"
+                  className="ourCompanyText"
+                />
+                <h4 className="ourCompanyText text-4xl font-extrabold text-[#091242]">
                   Our Company
                 </h4>
               </div>
-              <p className="text-[#606060] text-[15px] text-justify ">
+              <p className="text-[#606060] text-[15px] text-justify ourCompanyText">
                 Samson Sea Private Limited was established in 2022 by Mr. George
                 Samson and Mrs. Julie Samson, with a vision to redefine customer
                 satisfaction in the maritime industry. Rooted in a strong

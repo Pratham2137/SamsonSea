@@ -42,3 +42,7 @@
   font-weight: 600;
 }
 
+.char {
+  display: inline-block;
+  opacity: 0;
+}
