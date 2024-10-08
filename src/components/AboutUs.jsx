@@ -116,7 +116,6 @@ const AboutUs = () => {
         trigger: ".ourIndustryImg",
         start: "top bottom",
         end: "top 70%",
-        markers: true,
         // play pause resume reset restart complete reverse none
         toggleActions: "none play none reset",
       },
