@@ -11,11 +11,16 @@ const Navbar = () => {
 
   const toggleNavigation = () => {
     setOpenNavigation(!openNavigation);
-    console.log(openNavigation ? "false" : "true");
   };
 
   // Helper function to check if the current link is active
   const isActiveLink = (url) => location.pathname === url;
+
+  const handleLinkClick = () => {
+    if (openNavigation) {
+      setOpenNavigation(false); // Close the menu when a link is clicked
+    }
+  };
 
   return (
     <header className="w-full h-[60px] flex justify-center items-center">
@@ -24,7 +29,7 @@ const Navbar = () => {
           openNavigation ? "w-full" : ""
         } `}
       >
-        <Link to="/">
+        <Link to="/" onClick={handleLinkClick}>
           <img src={logo} alt="SamsonSea" width={180} height={40} />
         </Link>
         <div
@@ -38,7 +43,8 @@ const Navbar = () => {
             <Link
               to={navItems.url}
               key={navItems.id}
-              className={`relative group py-1 px-3 rounded-xl`}
+              className="relative group py-1 px-3 rounded-xl"
+              onClick={handleLinkClick} // Close the menu on link click
             >
               {navItems.title}
               <span

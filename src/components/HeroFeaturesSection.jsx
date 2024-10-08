@@ -56,7 +56,7 @@ const HeroFeaturesSection = () => {
             </p>
             <div className="AnimateFeatureText">
               <Link
-                to="#"
+                to="/about-us"
                 className="w-fit py-2 px-4 rounded-3xl bg-[--pageYellow] font-semibold text-base text-white transition-all hover:text-[--pageBlue] hover:shadow-md"
               >
                 Read More

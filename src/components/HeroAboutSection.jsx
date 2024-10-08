@@ -17,7 +17,7 @@ const HeroAboutSection = () => {
         start: "top bottom",
         end: "top 70%",
         // play pause resume reset restart complete reverse none
-        toggleActions:"none play none reset"
+        toggleActions: "none play none reset",
       },
     });
 
@@ -27,11 +27,15 @@ const HeroAboutSection = () => {
       duration: 0.5,
       stagger: { each: 0.2 },
     });
-    animateTl.from("#heroAboutImg", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-    },"<0.5");
+    animateTl.from(
+      "#heroAboutImg",
+      {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+      },
+      "<0.5"
+    );
   });
 
   return (
@@ -75,8 +79,8 @@ const HeroAboutSection = () => {
           </div>
           <div className="animateText">
             <Link
-              to="#"
-              className="bg-[--pageYellow] w-fit py-2 px-4 font-semibold text-[18px] text-[--pageBlue] my-3 hover:bg-[--pageBlue] hover:text-[--pageYellow] transition-all duration-300 hover:shadow-2xl active:scale-[0.96]"
+              to="/about-us"
+              className="bg-[--pageYellow] w-fit py-2 px-4 font-semibold text-[18px] text-[--pageBlue] my-3 hover:bg-[--pageBlue] hover:text-[--pageYellow] transition-all duration-300 hover:shadow-2xl active:scale-[0.95]"
             >
               More About Us
             </Link>

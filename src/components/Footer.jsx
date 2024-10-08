@@ -35,7 +35,7 @@ const Footer = () => {
               <img
                 src={samsonseaLogo}
                 alt="SamsonSea"
-                className="h-[130px] lg:h-[90px] lg:w-[300px] w-[400px]"
+                className="h-[180px] lg:h-[90px] lg:w-[300px] w-[400px]"
               ></img>
             </h4>
             <p className="w-[90%] lg:w-full mb-3">

@@ -87,8 +87,8 @@ const HeroServiceSection = () => {
         </div>
         <div className="serviceBtn">
           <Link
-            className="bg-white text-[#091242] rounded hover:bg-[--pageYellow] hover:text-white font-semibold text-lg py-2 px-4 "
-            to="#"
+            className="bg-white text-[#091242] rounded hover:bg-[--pageYellow] hover:text-white font-semibold text-lg py-2 px-4 active:scale-[0.96]"
+            to="/service"
           >
             Learn More
           </Link>

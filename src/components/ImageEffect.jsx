@@ -21,7 +21,7 @@ ImageEffect.propTypes = {
   divClasses: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.string,
-  scale:PropTypes.bool,
+  scale: PropTypes.bool,
 };
 
 export default ImageEffect;
