@@ -6,11 +6,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
 
+// HeroFeaturesSection component starts here
 const HeroFeaturesSection = () => {
-  const [isBgLoaded, setIsBgLoaded] = useState(false);
+  const [isBgLoaded, setIsBgLoaded] = useState(false); // State to track background image loading
 
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+  // Animation timeline for features section when scrolling
   useGSAP(() => {
     let featureAnimate = gsap.timeline({
       scrollTrigger: {
@@ -21,6 +23,7 @@ const HeroFeaturesSection = () => {
       },
     });
 
+    // Animates feature text and cards when in view
     featureAnimate.from(".AnimateFeatureText", {
       opacity: 0,
       y: "40px",
@@ -38,7 +41,7 @@ const HeroFeaturesSection = () => {
     );
   });
 
-  // Lazy load the background image when the screen size is large enough
+  // Lazy load the background image for large screens
   useEffect(() => {
     if (window.innerWidth >= 1024) {
       const img = new Image();
@@ -56,6 +59,7 @@ const HeroFeaturesSection = () => {
         }}
       >
         <div className="max-w-[1200px] min-w-[350px] flex flex-col lg:flex-row justify-center items-center gap-10 px-5">
+          {/* Feature Description */}
           <div className="flex justify-center w-full h-full flex-col gap-2">
             <p className="AnimateFeatureText text-[--pageYellow] uppercase tracking-wider text-lg font-bold">
               Why Us ?
@@ -77,6 +81,8 @@ const HeroFeaturesSection = () => {
               </Link>
             </div>
           </div>
+
+          {/* Features List */}
           <div className="flex flex-col gap-y-6 featuresContainer">
             {homeFeatureSection.map((item) => (
               <div
@@ -98,5 +104,6 @@ const HeroFeaturesSection = () => {
     </div>
   );
 };
+// HeroFeaturesSection component ends here
 
 export default HeroFeaturesSection;

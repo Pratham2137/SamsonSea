@@ -193,7 +193,7 @@ const AboutUs = () => {
           {/*Our History Section End*/}
 
           {/*Our mission Section Start*/}
-          <div className="flex justify-around items-center mb-10 lg:flex-row flex-col-reverse">
+          <div className="flex justify-around items-center mb-4 lg:mb-10 lg:flex-row flex-col-reverse overflow-hidden">
             <div className="lg:w-[40%] w-full flex flex-col gap-5">
               <div>
                 <SubtitleContainer text="Mission" className="ourMissionText" />
@@ -266,7 +266,7 @@ const AboutUs = () => {
           {/*Our Mission Section End*/}
 
           {/*Our Industry Section Start*/}
-          <div className="flex lg:justify-around items-center mt-5 lg:flex-row flex-col justify-center ">
+          <div className="flex lg:justify-around items-center lg:mt-5 lg:flex-row flex-col justify-center ">
             <div className="overflow-hidden rounded-xl mb-10 lg:mb-0">
               <ImageEffect
                 src={ourIndustry}

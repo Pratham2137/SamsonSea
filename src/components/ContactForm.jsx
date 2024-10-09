@@ -37,6 +37,7 @@ const ContactForm = ({ className }) => {
         formData.append("phone", formattedPhone);
 
         fetch(scriptURL, { method: "POST", body: formData })
+          // eslint-disable-next-line no-unused-vars
           .then((response) =>
             alert("Thank you! Your form is submitted successfully.")
           )
@@ -90,7 +91,12 @@ const ContactForm = ({ className }) => {
               </div>
               <div>
                 <h5 className="text-[#424E60]">My Email:</h5>
-                <p className="text-[#132238] font-semibold">mymail@mail.com</p>
+                <a
+                  href="mailto:smsnsea@gmail.com"
+                  className="text-[#132238] font-semibold"
+                >
+                  smsnsea@gmail.com
+                </a>
               </div>
             </div>
             <div className="flex items-center gap-3 hover:shadow-md w-[300px] p-3 rounded-md">
@@ -99,7 +105,11 @@ const ContactForm = ({ className }) => {
               </div>
               <div>
                 <h5 className="text-[#424E60]">Call Us Now:</h5>
-                <p className="text-[#132238] font-semibold">00-1234 00000</p>
+                <div className="text-[#132238] font-semibold flex ">
+                  <a href="tel:9870445480">9870445480</a>
+                  <p>&ensp;/&ensp;</p>
+                  <a href="tel:7768825296">7768825296</a>
+                </div>
               </div>
             </div>
           </div>
@@ -183,7 +193,7 @@ const ContactForm = ({ className }) => {
                   className="w-full py-2.5 text-base border-b border-gray-300 bg-transparent outline-none focus:border-[#091242] transition-all "
                   defaultValue="Select a Service"
                 >
-                  <option value="Select a Service" disabled >
+                  <option value="Select a Service" disabled>
                     Select a Service*
                   </option>
                   <option value="Ship Management & Consultancy Services">

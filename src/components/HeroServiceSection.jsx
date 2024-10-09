@@ -6,20 +6,24 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// HeroServiceSection component starts here
 const HeroServiceSection = () => {
+  
+  // Register GSAP plugin for scroll-based animations
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+  // Animation timeline for services section when scrolling
   useGSAP(() => {
     let serviceAnimate = gsap.timeline({
       scrollTrigger: {
         trigger: ".serviceContainer",
         start: "top bottom",
         end: "top 70%",
-        // play pause resume reset restart complete reverse none
         toggleActions: "none play none reset",
       },
     });
 
+    // Animates service cards and button when in view
     serviceAnimate.from(".serviceContainer", {
       opacity: 0,
       x: 60,
@@ -27,6 +31,7 @@ const HeroServiceSection = () => {
       ease: "power2.inOut",
       stagger: { each: 0.3 },
     });
+
     serviceAnimate.from(
       ".serviceBtn",
       {
@@ -46,20 +51,22 @@ const HeroServiceSection = () => {
       }}
     >
       <div
-        className=" h-full py-5 flex flex-col justify-center items-center gap-10 max-w-[1200px] min-w-[350px]" // Add a height or necessary classes
+        className="h-full py-5 flex flex-col justify-center items-center gap-10 max-w-[1200px] min-w-[350px]"
       >
+        {/* Section title */}
         <h1 className="font-semibold text-white text-4xl relative group">
           Our Services
-          <span
-            className={`absolute left-1/2 -translate-x-1/2 bottom-[-5px] h-[3px] bg-[--pageYellow] w-[60%] `}
-          ></span>
+          <span className="absolute left-1/2 -translate-x-1/2 bottom-[-5px] h-[3px] bg-[--pageYellow] w-[60%]"></span>
         </h1>
+
+        {/* Service cards */}
         <div className="flex gap-y-4 gap-x-4 flex-col lg:flex-row justify-center items-center h-full w-full">
           {heroServiceSection.map((item) => (
             <div
               key={item.id}
               className="bg-white w-[300px] lg:w-[350px] hover:shadow-2xl rounded overflow-hidden serviceContainer"
             >
+              {/* Service image */}
               <div>
                 <ImageEffect
                   src={item.imgURL}
@@ -68,11 +75,13 @@ const HeroServiceSection = () => {
                   scale={true}
                 />
               </div>
-              <div className="flex flex-col py-2 px-4 gap-y-4 ">
+
+              {/* Service description */}
+              <div className="flex flex-col py-2 px-4 gap-y-4">
                 <h3 className="text-xl font-semibold text-[#091242]">
                   {item.title}
                 </h3>
-                <p className="text-[15px] text-[#606060] lg:text-justify ">
+                <p className="text-[15px] text-[#606060] lg:text-justify">
                   {item.desc}
                 </p>
                 <Link
@@ -85,6 +94,8 @@ const HeroServiceSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Learn more button */}
         <div className="serviceBtn">
           <Link
             className="bg-white text-[#091242] rounded hover:bg-[--pageYellow] hover:text-white font-semibold text-lg py-2 px-4 active:scale-[0.96]"
@@ -97,5 +108,6 @@ const HeroServiceSection = () => {
     </div>
   );
 };
+// HeroServiceSection component ends here
 
 export default HeroServiceSection;

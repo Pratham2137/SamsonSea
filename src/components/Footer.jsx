@@ -46,16 +46,18 @@ const Footer = () => {
               <img src={emailIcon}></img>
               <div className="flex flex-col">
                 <p>Email</p>
-                <a href="mailto:contact@Delhiveryshipping.com">
-                  contact@Delhiveryshipping.com
-                </a>
+                <a href="mailto:smsnsea@gmail.com">smsnsea@gmail.com</a>
               </div>
             </div>
             <div className="flex gap-3 items-center">
               <img src={callIcon}></img>
               <div className="flex flex-col">
                 <p>Call Us</p>
-                <a href="tel:00112365489">(00) 112 365 489</a>
+                <div className="flex">
+                  <a href="tel:9870445480">9870445480</a>
+                  <p>&emsp;/&emsp;</p>
+                  <a href="tel:7768825296">7768825296</a>
+                </div>
               </div>
             </div>
           </div>

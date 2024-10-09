@@ -7,9 +7,12 @@ import SubtitleContainer from "./SubtitleContainer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// HeroAboutSection component starts here
 const HeroAboutSection = () => {
+  // Register GSAP plugin for scroll-based animations
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+  // Animation timeline for text and image when scrolling
   useGSAP(() => {
     let animateTl = gsap.timeline({
       scrollTrigger: {
@@ -21,12 +24,15 @@ const HeroAboutSection = () => {
       },
     });
 
+    // Text animation - fades in and slides up
     animateTl.from(".animateText", {
       opacity: 0,
       y: "40px",
       duration: 0.5,
       stagger: { each: 0.1 },
     });
+
+    // Image animation - fades in and scales up
     animateTl.from(
       "#heroAboutImg",
       {
@@ -41,12 +47,16 @@ const HeroAboutSection = () => {
   return (
     <div className="w-full flex justify-center overflow-hidden">
       <div className="flex flex-col lg:flex-row py-9 gap-y-5 justify-between max-w-[1200px] min-w-[350px] items-center w-full px-10">
-        <div className=" flex flex-col md:items-center lg:items-start lg:w-[50%]">
-          <div className="animateText lex flex-col md:items-center lg:items-start">
+        {/* Text content section */}
+        <div className="flex flex-col md:items-center lg:items-start lg:w-[50%]">
+          <div className="animateText flex flex-col md:items-center lg:items-start">
+            {/* Subtitle and Main Heading */}
             <SubtitleContainer text="Welcome to SamsonSea" className="mb-1" />
-            <h1 className=" animateText text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
+            <h1 className="animateText text-5xl font-bold mb-5 text-[#1C2752] md:text-center lg:text-left">
               We’re Committed <br /> to Quality
             </h1>
+
+            {/* Description paragraph */}
             <p className="animateText text-[15px] text-[#606060] w-full mb-5 md:text-center lg:text-justify text-left">
               Our team combines deep industry knowledge with tailored services,
               ensuring efficient and reliable operations across all aspects of
@@ -54,6 +64,8 @@ const HeroAboutSection = () => {
               or ship inspections, we are dedicated to meeting your unique needs
               and exceeding expectations every step of the way.
             </p>
+
+            {/* Key points with tick icons */}
             <div className="animateText flex gap-5 mb-5 text-[#1C2752] font-semibold">
               <div className="flex flex-col gap-10">
                 <div className="flex justify-center items-center gap-2">
@@ -77,6 +89,8 @@ const HeroAboutSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Link to "More About Us" */}
           <div className="animateText">
             <Link
               to="/about-us"
@@ -86,6 +100,8 @@ const HeroAboutSection = () => {
             </Link>
           </div>
         </div>
+
+        {/* Image section */}
         <div className="lg:w-auto md:w-full" id="heroAboutImg">
           <ImageEffect
             src={ship}
@@ -98,5 +114,6 @@ const HeroAboutSection = () => {
     </div>
   );
 };
+// HeroAboutSection component ends here
 
 export default HeroAboutSection;
