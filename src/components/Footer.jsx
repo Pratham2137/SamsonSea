@@ -6,7 +6,7 @@ import emailIcon from "../assets/Footer/footerMessage.png";
 import callIcon from "../assets/Footer/footerCall.png";
 import { navigationFooter } from "../constants";
 import { PiPaperPlaneRightBold } from "react-icons/pi";
-import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   const location = useLocation();
@@ -53,9 +53,9 @@ const Footer = () => {
               <img src={callIcon}></img>
               <div className="flex flex-col">
                 <p>Call Us</p>
-                <div className="flex">
+                <div className="flex gap-1">
                   <a href="tel:9870445480">9870445480</a>
-                  <p>&emsp;/&emsp;</p>
+                  <p>/</p>
                   <a href="tel:7768825296">7768825296</a>
                 </div>
               </div>
@@ -96,13 +96,16 @@ const Footer = () => {
               >
                 Submit <PiPaperPlaneRightBold className="text-xl font-bold" />
               </a>
-              <a href="https://www.linkedin.com/">
+              <a href="https://www.linkedin.com/in/samson-sea-612709332/?originalSubdomain=in">
                 <FaLinkedin className="text-xl hover:text-[--pageYellow] transition " />
               </a>
-              <a href="https://x.com/">
-                <FaTwitter className="text-xl hover:text-[--pageYellow] transition" />
+              <a
+                className="text-xl hover:text-[--pageYellow] transition"
+                href="https://www.instagram.com/smsn.sea"
+              >
+                <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/">
+              <a href="https://m.facebook.com/61566797021390/">
                 <FaFacebook className="text-xl hover:text-[--pageYellow] transition" />
               </a>
             </div>

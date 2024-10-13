@@ -105,9 +105,9 @@ const ContactForm = ({ className }) => {
               </div>
               <div>
                 <h5 className="text-[#424E60]">Call Us Now:</h5>
-                <div className="text-[#132238] font-semibold flex ">
+                <div className="text-[#132238] font-semibold flex gap-1">
                   <a href="tel:9870445480">9870445480</a>
-                  <p>&ensp;/&ensp;</p>
+                  <p>/</p>
                   <a href="tel:7768825296">7768825296</a>
                 </div>
               </div>
@@ -116,19 +116,19 @@ const ContactForm = ({ className }) => {
           <div className="flex gap-x-5 items-center">
             <a
               className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
-              href="https://www.facebook.com/"
+              href="https://m.facebook.com/61566797021390/"
             >
               <FaFacebookF />
             </a>
             <a
               className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/smsn.sea"
             >
               <FaInstagram />
             </a>
             <a
               className="hover:bg-[#091242] hover:text-white text-[#091242] text-xl p-2 rounded"
-              href="https://in.linkedin.com/"
+              href="https://www.linkedin.com/in/samson-sea-612709332/?originalSubdomain=in"
             >
               <FaLinkedinIn />
             </a>
