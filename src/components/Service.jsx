@@ -36,7 +36,6 @@ const Service = () => {
         trigger: ".serviceContainer",
         start: "top 80%",
         end: "bottom 95%",
-        markers: true,
         scrub: 4,
         // play pause resume reset restart complete reverse none
         // toggleActions: "none play none reset",
