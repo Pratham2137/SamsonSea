@@ -109,12 +109,6 @@ export const homeFeatureSection = [
 
 export const Services = [
   {
-    id: 1,
-    title: "Ship Management &<br/>Consultancy Services",  // Add <br/>
-    desc: "Samson Sea offers comprehensive ship management solutions, including crew management, technical services, compliance, and safety management. Our consultancy services provide expert advice to ship owners and operators, helping them navigate complex regulatory environments and optimize their operations",
-    imgURL: serviceImg1,
-  },
-  {
     id: 2,
     title: `Ship Brokers &<br/>Charterers-Offshore`,
     desc: "Our ship brokering services connect ship owners with charterers, facilitating long-term partnerships and successful offshore operations. We handle all aspects of the chartering process, ensuring both parties achieve their operational and financial goals",

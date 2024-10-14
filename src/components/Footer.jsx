@@ -28,7 +28,7 @@ const Footer = () => {
           </p>
         )}
       </div>
-      <div className="bg-[#091242] text-white flex gap-y-5 flex-col items-center py-6 overflow-hidden px-10">
+      <div className="bg-[#091242] text-white flex gap-y-3 flex-col items-center py-5 overflow-hidden px-10">
         <div className="flex flex-col lg:flex-row justify-center px-1 lg:px-8 gap-y-10 lg:justify-between gap-x-5 max-w-[1200px] min-w-[350px] mb-5">
           <div className="flex flex-col gap-5 lg:w-[35%] w-full">
             <h4 className="self-center lg:self-start">
@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-[1px] bg-white border-none lg:w-[120%] w-full" />
-        <div className="p-2">
+        <div>
           Copyright © Samson Sea Private Limited | Designed & Developed by
           Synergy Media
         </div>
