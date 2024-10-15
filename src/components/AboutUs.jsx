@@ -50,7 +50,7 @@ const AboutUs = () => {
       ".ourCompanyImg3",
       {
         opacity: 0,
-        width: 0,
+        width: "60%",
         duration: 0.5,
       },
       "<0.5"
