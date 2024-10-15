@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import NotFound from "./components/NotFound"; // Create a NotFound component for handling 404 pages
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<NotFound />} />{" "}
+        {/* Catch-all route for undefined paths */}
       </Routes>
       <Footer />
     </Router>
