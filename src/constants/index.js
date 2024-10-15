@@ -1,7 +1,6 @@
 import heroService1 from "../assets/HomePage/service1.png";
 import heroService2 from "../assets/HomePage/service2.png";
 import heroService3 from "../assets/HomePage/service3.png";
-import serviceImg1 from "../assets/Serivce/01.png";
 import serviceImg2 from "../assets/Serivce/02.png";
 import serviceImg3 from "../assets/Serivce/03.png";
 import serviceImg4 from "../assets/Serivce/04.png";
@@ -55,7 +54,7 @@ export const navigationFooter = [
   {
     id: 4,
     title: "Privacy Policy",
-    url: "#",
+    url: "/privacy-policy",
   },
 ];
 
